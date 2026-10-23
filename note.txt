@@ -1,0 +1,13 @@
+TO START:
+php -S localhost:8000 -t public
+
+TO UPDATE COMPOSER:
+composer dump-autoload
+
+composer.json indica las dependencias.
+
+Ficheros de clases siempre estan Capitalizados.
+El resto siempre en minusculas.
+
+Carpetas siguen las reglas de ficheros.
+
