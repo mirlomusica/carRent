@@ -14,7 +14,6 @@ abstract class Model{
 
     public function getById(int $id):?array{
         $stmt = $this->db->prepare("Select * FROM {$this->table} WHERE id=:id");
-        var_dump($stmt);
         $stmt->execute([":id"=>$id]);
         return $stmt->fetch()? :null;
     }

@@ -1,7 +1,7 @@
 <nav>
     <ul>
         <?php foreach($menu as $item):?>
-<li><?php echo $item;?></li>
+        <li><?= $item?></li>
         <?php endforeach;?>
     </ul>
 </nav>

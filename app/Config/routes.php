@@ -1,6 +1,7 @@
 <?php
 
 use App\Controllers\HomeController;
+use App\Controllers\UsersController;
 
 return [
     [
@@ -22,5 +23,15 @@ return [
         'path' => '/users',
         'method' => 'GET',
         'handler' => [HomeController::class, 'users']
+    ],
+    [
+        'path' => '/createUser',
+        'method' => 'POST',
+        'handler' => [UsersController::class, 'createUser']
+    ],
+    [
+        'path' => '/createUser',
+        'method' => 'GET',
+        'handler' => [UsersController::class, 'createUserView']
     ],
 ];

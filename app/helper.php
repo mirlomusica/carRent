@@ -20,3 +20,7 @@ function view(string $view, array $data = []) {
 function env(string $var){
     return $_ENV[$var];
 }
+
+function redirect(string $url){
+    header("location:$url");
+}
