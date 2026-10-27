@@ -36,4 +36,32 @@ class UsersController {
     function createUserView(){
             echo view("createUser", [ "title" => "User Creation" ]);
     }
+
+    function login(){
+        $name = filter_input(INPUT_POST,"name");
+        $email = filter_input(INPUT_POST,"email");
+        $password = filter_input(INPUT_POST,"password");
+
+        try{
+            $db=new DB();
+            $userRepo = new User();
+            $user = $userRepo->getByName($name);
+        }catch(Exception $e){
+            echo view("error", [ "title" => "error" , "message"=>$e->getMessage()]);
+        }
+
+
+
+        
+        if(password_verify($password, $user->encryptedPassword)) {
+            echo "login good";
+        }else{
+            echo view("error", [ "title" => "error" , "message"=>"Login Incorrecto"]);
+
+        }
+    }
+
+    function loginView(){
+            echo view("login", [ "title" => "Login" ]);
+    }
 }

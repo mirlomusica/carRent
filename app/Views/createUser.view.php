@@ -1,4 +1,4 @@
-<h1>LOGIN</h1>
+<h1>CREATE A USER</h1>
 
 <form method="post" action="/createUser">
     <label for="name">Name: </label>
@@ -6,8 +6,8 @@
     <label for="email">Email: </label>
     <input type="text" id="email" name="email"></input>
     <label for="password">password: </label>
-    <input type="text" id="password" name="password"></input>
-    <input type="submit" value="Create User">
+    <input type="password" id="password" name="password"></input>
+    <input type="submit" value="CREATE">
 </form>
 
 <style>

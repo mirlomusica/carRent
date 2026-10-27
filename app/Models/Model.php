@@ -6,10 +6,14 @@ use PDO;
 
 
 abstract class Model{
-    private PDO $db;
+    protected PDO $db;
     /* private string $table; */
     public function __construct(){
-        $this->db = DB::getConnection();
+        try{
+            $this->db = DB::getConnection();
+        }catch(Exception $e){
+            echo $e->getMessage();
+        }
     }
 
     public function getById(int $id):?array{

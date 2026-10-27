@@ -28,12 +28,13 @@ class DB{
                     []);
 
             }catch(PDOException $e){
+                echo "pdo error";
                 echo $e->getMessage();
 
             }
-            return self::$instance;
 
         }
+        return self::$instance;
     }
 
 }

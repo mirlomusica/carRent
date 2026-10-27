@@ -34,4 +34,15 @@ return [
         'method' => 'GET',
         'handler' => [UsersController::class, 'createUserView']
     ],
+    [
+        'path' => '/login',
+        'method' => 'GET',
+        'handler' => [UsersController::class, 'loginView']
+    ],
+
+    [
+        'path' => '/login',
+        'method' => 'POST',
+        'handler' => [UsersController::class, 'login']
+    ],
 ];
