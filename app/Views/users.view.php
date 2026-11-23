@@ -1,4 +1,5 @@
 <?php include "partials/header.view.php"; ?>
+<?php include "partials/nav.view.php"; ?>
     <h1>THIS IS THE USERS PAGE</h1>
     <table>
         <tr>

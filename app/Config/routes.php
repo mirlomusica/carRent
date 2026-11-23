@@ -1,5 +1,6 @@
 <?php
 
+use App\Controllers\CarController;
 use App\Controllers\HomeController;
 use App\Controllers\UsersController;
 
@@ -44,5 +45,22 @@ return [
         'path' => '/login',
         'method' => 'POST',
         'handler' => [UsersController::class, 'login']
+    ],
+
+    [
+        'path' => '/createCar',
+        'method' => 'GET',
+        'handler' => [CarController::class, 'createCarView']
+    ],
+
+    [
+        'path' => '/createCar',
+        'method' => 'POST',
+        'handler' => [CarController::class, 'createCar']
+    ],
+    [
+        'path' => '/cars',
+        'method' => 'GET',
+        'handler' => [CarController::class, 'carsView']
     ],
 ];

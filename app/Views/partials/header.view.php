@@ -7,9 +7,12 @@
 
 </head>
 <body>
-    <header>
-        <h1 class="h-8"><?= env("APP_NAME") ?></h1>
-    </header>
+
+    <a href="/">
+        <header>
+            <h1 class="h-8"><?= env("APP_NAME") ?></h1>
+        </header>
+    </a>
     <style>
         nav{
             display: flex;

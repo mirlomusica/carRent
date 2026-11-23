@@ -25,6 +25,7 @@ class UsersController {
             $user->create([
                 "name"=>$name,
                 "email"=>$email,
+                "admin"=>true,
                 "password"=>password_hash($password,PASSWORD_DEFAULT)
             ]);
             redirect("/users");
@@ -50,12 +51,13 @@ class UsersController {
             echo view("error", [ "title" => "error" , "message"=>$e->getMessage()]);
         }
 
-
-
-        
         if(password_verify($password, $user->encryptedPassword)) {
-            echo "login good";
+
+            $_SESSION["user"] = $user->id;
+            var_dump($_SESSION["user"]);
+            redirect("/");
         }else{
+            error_log("loginerror");
             echo view("error", [ "title" => "error" , "message"=>"Login Incorrecto"]);
 
         }
