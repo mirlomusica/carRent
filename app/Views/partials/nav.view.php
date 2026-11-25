@@ -3,6 +3,7 @@
             <a href="/createCar">Upload</a>
             <a href="/cars">Cars</a>
             <a href="/login">Login</a>
+            <a href="/logoff">Logout</a>
 </nav>
 <style>
 nav{

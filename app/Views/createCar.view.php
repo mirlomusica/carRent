@@ -1,3 +1,5 @@
+<?php include "partials/header.view.php"; ?>
+<?php include "partials/nav.view.php"; ?>
 <h1>Create a Car</h1>
 
 <form method="post" action="/createCar" enctype="multipart/form-data">

@@ -48,6 +48,12 @@ return [
     ],
 
     [
+        'path' => '/logoff',
+        'method' => 'GET',
+        'handler' => [UsersController::class, 'logoff']
+    ],
+
+    [
         'path' => '/createCar',
         'method' => 'GET',
         'handler' => [CarController::class, 'createCarView']

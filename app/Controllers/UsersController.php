@@ -66,4 +66,10 @@ class UsersController {
     function loginView(){
             echo view("login", [ "title" => "Login" ]);
     }
+
+    function logoff(){
+
+        $_SESSION["user"] = null;
+        echo redirect("/");
+    }
 }

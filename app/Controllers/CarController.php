@@ -13,7 +13,14 @@ class CarController {
     function createCar() {
         $name = filter_input(INPUT_POST,"name");
         $description = filter_input(INPUT_POST,"description");
-        $imgBlob = file_get_contents($_FILES['imgBlob']['tmp_name']);
+        if(isset($_FILES['imgBlob']['tmp_name']) && $_FILES['imgBlob']['tmp_name']!= ""){
+            $imgBlob = file_get_contents($_FILES['imgBlob']['tmp_name']);
+        }
+
+        if(!$name || !$imgBlob){
+            echo view("error", [ "title" => "error" , "message"=>"Por favor rellena todos los campos necesarios"]);
+            return;
+        }
 
         try{
             $db=new DB();
